@@ -6,7 +6,7 @@ function SamosaWithConnect(props) {
   return (
     <div>
       <div>
-        Number of Samosas: <b>{props.number_of_samosas}</b>
+        {props.id} Number of Samosas: <b>{props.number_of_samosas}</b>
       </div>
       <button onClick={() => props.buy_samosa()}>Buy</button>
       <button onClick={() => props.make_samosa()}>Make</button>
@@ -14,12 +14,12 @@ function SamosaWithConnect(props) {
   );
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
   return {
     number_of_samosas: state.samosa.number_of_samosas,
   };
 };
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     buy_samosa: () => dispatch(buySamosa()),
     make_samosa: () => dispatch(makeSamosa()),

@@ -10,7 +10,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <SamosaComponent />
-        <SamosaWithConnect />
+        <SamosaWithConnect id="ID1" />
         <AsyncActionDemo />
       </div>
     </Provider>
